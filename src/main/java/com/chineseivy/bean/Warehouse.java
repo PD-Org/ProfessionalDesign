@@ -12,7 +12,6 @@ import java.util.Date;
 public class Warehouse implements Serializable {
     private int goodID;
     private int shopID;
-    private int warehouseID;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date supplyTime;//上货时间
     private long supplyNumber;//上货数量
@@ -21,10 +20,9 @@ public class Warehouse implements Serializable {
     public Warehouse() {
     }
 
-    public Warehouse(int goodID, int shopID, int warehouseID, Date supplyTime, long supplyNumber, long wareNumber) {
+    public Warehouse(int goodID, int shopID, Date supplyTime, long supplyNumber, long wareNumber) {
         this.goodID = goodID;
         this.shopID = shopID;
-        this.warehouseID = warehouseID;
         this.supplyTime = supplyTime;
         this.supplyNumber = supplyNumber;
         this.wareNumber = wareNumber;
@@ -44,14 +42,6 @@ public class Warehouse implements Serializable {
 
     public void setShopID(int shopID) {
         this.shopID = shopID;
-    }
-
-    public int getWarehouseID() {
-        return warehouseID;
-    }
-
-    public void setWarehouseID(int warehouseID) {
-        this.warehouseID = warehouseID;
     }
 
     public Date getSupplyTime() {
